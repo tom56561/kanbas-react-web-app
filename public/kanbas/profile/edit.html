@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 15%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Column 1 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../home.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+        <!-- Column 2 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="./index.html">Profile</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">ePortfolios</a></li>
+                <li><a href="#">Shared Content</a></li>
+                <li><a href="#">The Hub</a></li>
+                <li><a href="#">Qwickly Course Tools</a></li>
+                <li><a href="#">Global Announcements</a></li>
+            </ul>
+        </nav>
+
+        <!-- Column 3 -->
+        <div>
+            <form action="./index.html" id="profile-edit-form">
+                <div>
+                    <h1>Po Shen Lee</h1>
+                    <label for="profile-edit-name">Name:* </label>
+                    <input type="text" name="name" id="profile-edit-name" value="Po Shen Lee">
+                    <label for="profile-edit-pronouns">Pronouns: </label>
+                    <select name="pronouns" id="profile-edit-pronouns">
+                        <option value="NONE" selected>None</option>
+                        <option value="HE-HIM-HIS">He/Him/His</option>
+                        <option value="SHE-HER-HERS">She/Her/Hers</option>
+                        <option value="THEY-THEM-THEIRS">They/Them/Theirs</option>
+                    </select>
+                    <br>
+                    <label for="profile-edit-title">Title: </label>
+                    <input type="text" name="title" id="profit-edit-title">
+                </div>
+                <div>
+                    <h2>Contact</h2>
+                    No registered services, you can add some on the <a href="#">settings</a> page.
+                </div>
+                <div>
+                    <h2>Contact</h2>
+                    No registered services, you can add some on the <a href="#">settings</a> page.
+                </div>
+                <div>
+                    <h2>Biography</h2>
+                    <textarea name="biography" id="profile-edit-biography" cols="30"
+                        rows="10">NEU MCSC sudent</textarea>
+                </div>
+                <div>
+                    <h2>Links</h2>
+                    <ul>
+                        <li id="external-link"><a href="https://www.linkedin.com/in/eddielee207/">Linkedin</a> Links to an
+                            external site.
+                        </li>
+                    </ul>
+                </div>
+                <table border="0" id="links-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th></th>
+                            <th>
+                                URL
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="auto-width"><input type="text" name="link-title" id="profile-edit-link-title"
+                                    value="Linkedin">
+                            </td>
+                            <td>&rarr;</td>
+                            <td class="auto-width"><input type="text" name="link-url" id="profile-edit-link-url"
+                                    value="https://www.linkedin.com/in/eddielee207/"></td>
+                            <td><a href="#">Remove</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="profile-edit-link-buttons">
+                    <button type="button">Add another link</button>
+                    <br>
+                    <button type="button">Cancel</button>
+                    <button>Save Profile</button>
+                    <br>
+                    <button type="button">Edit Profile</button>
+                    <button>Cancel Editing</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

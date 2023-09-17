@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Assignment</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 15%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Column 1 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../profile/index.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+        <!-- Column 2 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="../grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="../setting/course_details.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <!-- Column 3 -->
+        <div>
+            <select name="assignment-edit-speed-grader" id="assignment-edit-speed-grader">
+                <option value="SPEED-GRADER" selected>SpeedGrader</option>
+            </select>
+            <hr>
+            <form action="../assignments/index.html">
+                <div id="assignment-edit-assignment-basic-info">
+                    <label for="assignment-edit-assignment-name">
+                        <h2>Assignment Name</h2>
+                    </label>
+                    <input type="text" name="assignment-name" id="assignment-edit-assignment-name"
+                        value="A1 - ENV + HTML">
+                    <br>
+                    <br>
+                    <textarea name="assignment-description" id="assignment-edit-assignment-description" cols="30"
+                        rows="10">This is the assignment description.</textarea>
+                </div>
+                <br>
+                <div id="assignment-edit-assignment-points">
+                    <label for="assignment-edit-assignment-points">Points</label>
+                    <br>
+                    <input type="number" name="assignment-points" id="assignment-edit-assignment-points" value="100"
+                        max="100" min="0" step=1 value="100">
+                </div>
+                <br>
+                <div id="assignment-edit-assignment-group">
+                    <label for="assignment-edit-assignment-group">Assignment Group</label>
+                    <br>
+                    <select name="assignment-group" id="assignment-edit-assignment-group">
+                        <option value="ASSIGNMENTS" selected>Assignments</option>
+                        <option value="EXAMS">Exams</option>
+                        <option value="PROJECT">Project</option>
+                    </select>
+                </div>
+                <br>
+                <div id="assignment-edit-assignment-grade-display">
+                    <label for="assignment-edit-assignment-grade-display-as">Display Grade as</label>
+                    <br>
+                    <select name="assignment-grade-display-as" id="assignment-edit-assignment-grade-display-as">
+                        <option value="PERCENTAGE" selected>Percentage</option>
+                        <option value="VALUE">Grade Value</option>
+                    </select>
+                </div>
+                <br>
+                <div id="assignment-edit-submission-type">
+                    <label for="assignment-edit-assignment-submission-type-dropdown">Submission type</label>
+                    <br>
+                    <select name="assignment-submission-type" id="assignment-edit-assignment-submission-type-dropdown">
+                        <option value="ONLINE" selected>Online</option>
+                        <option value="IN-PERSON">In Person</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div id="assignment-edit-submission-online-options">
+                        <label for="">Online Entry Options</label>
+                        <br>
+                        <input type="checkbox" name="check-online-entry" id="checkbox-text-entry">
+                        <label for="checkbox-text-entry">Text Entry</label>
+                        <br>
+                        <input type="checkbox" name="check-online-entry" id="checkbox-website-url">
+                        <label for="checkbox-website-url">Website URL</label>
+                        <br>
+                        <input type="checkbox" name="check-online-entry" id="checkbox-media-recordings">
+                        <label for="checkbox-media-recordings">Media Recordings</label>
+                        <br>
+                        <input type="checkbox" name="check-online-entry" id="checkbox-student-annotation">
+                        <label for="checkbox-student-annotation">Student Annotation</label>
+                        <br>
+                        <input type="checkbox" name="check-online-entry" id="checkbox-file-uploads">
+                        <label for="checkbox-file-uploads">File Uploads</label>
+                    </div>
+                </div>
+                <br>
+                <div id="assignment-edit-submission-attempts">
+                    <label for="assignment-edit-submission-attempts-dropdown">
+                        Submission Attempts
+                    </label>
+                    <br>
+                    <select name="submision-attempts" id="assignment-edit-submission-attempts-dropdown">
+                        <option value="UNLIMITED" selected>Unlimited</option>
+                        <option value="ONE">1</option>
+                        <option value="TWO">2</option>
+                        <option value="THREE">3</option>
+                        <option value="FOUR">4</option>
+                        <option value="FIVE">5</option>
+                    </select>
+                </div>
+                <br>
+                <div id="assignment-edit-plagiarism">
+                    <label for="assignment-edit-plagiarism-dropdown">
+                        Plagiarism Review
+                    </label>
+                    <br>
+                    <select name="plagiarism" id="assignment-edit-plagiarism-dropdown">
+                        <option value="NONE" selected>None</option>
+                        <option value="STRICT">Strict</option>
+                        <option value="RELAXED">Relaxed</option>
+                    </select>
+                </div>
+                <br>
+                <div id="assignment-edit-group-assignment">
+                    <label for="">
+                        Group Assignment
+                    </label>
+                    <br>
+                    <input type="checkbox" name="check-group" id="checkbox-group">
+                    <label for="checkbox-group">This is a group assignment</label>
+                </div>
+                <br>
+                <div id="assignment-edit-peer-reviews">
+                    <label for="">
+                        Peer Reviews
+                    </label>
+                    <br>
+                    <input type="checkbox" name="check-peer-reviews" id="checkbox-peer-reviews">
+                    <label for="checkbox-peer-reviews">Require Peer Reviews</label>
+                </div>
+                <br>
+                <div id="assignment-edit-assign-to">
+                    <label for="">Assign</label>
+                    <br>
+                    <label for="assignment-eidt-assign-to-input">Assign to</label>
+                    <br>
+                    <input type="text" name="assign-to" id="assignment-edit-assign-to-input" value="Everyone">
+                </div>
+                <br>
+                <div id="assignment-edit-dates">
+                    <label for="assignment-edit-assignment-due">
+                        Due
+                    </label>
+                    <br>
+                    <input type="date" name="due" id="assignment-edit-assignment-due-input" value="2023-01-01">
+                    <br>
+                    <br>
+                    <label for="assignment-edit-assignment-available-from">
+                        Available from
+                    </label>
+                    <br>
+                    <input type="date" name="available-from" id="assignment-edit-assignment-available-from"
+                        value="2023-01-01">
+                    <br>
+                    <br>
+                    <label for="assignment-edit-assignment-until">
+                        Until
+                    </label>
+                    <br>
+                    <input type="date" name="until" id="assignment-edit-assignment-until" value="2023-01-01">
+                </div>
+                <br>
+                <div id="assignment-edit-submision-buttons">
+                    <button>Cancel</button>
+                    <button>Save</button>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

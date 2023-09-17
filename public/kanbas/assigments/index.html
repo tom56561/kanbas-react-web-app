@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 15%;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- Column 1 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../profile/index.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+
+        <!-- Column 2 -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="../grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="../setting/course_details.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="search-section">
+                <input type="text" placeholder="Search for Assignments" />
+                <button>Group</button>
+                <button>Assignment</button>
+                <select name="assignment-navigation-options">
+                    <option value="EDIT-ASSIGNMENT-DATES" selected>Edit Assignment Dates</option>
+                    <option value="ASSIGNMENT-GROUPS-WEIGHT">Assignment Groups Weight</option>
+                    <option value="GRADESCOPE-1.3">Gradescope 1.3</option>
+                    <option value="COMMONS-FAVORITES">Commons Favorites</option>
+                </select>
+            </section>
+
+            <section class="content-section">
+                <article id="assignments-section">
+                    <header>
+                        <h3>ASSIGNMENTS 40% of Total
+                            <select id="assignments-section-dropdown">
+                                <option value="EDIT" selected>Edit</option>
+                                <option value="SPEED-GRADER">Speed Grader</option>
+                                <option value="DUPLICATE">Duplicate</option>
+                                <option value="DELETE">Delete</option>
+                                <option value="MOVE-TO">Move To...</option>
+                                <option value="SEND-TO">Send To...</option>
+                                <option value="COPY-TO">Copy To...</option>
+                                <option value="SHARE-TO-COMMONS">Share to Commons</option>
+                            </select>
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="./edit.html">A1 - ENV + HTML</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A2 - CSS + BOOTSTRAP</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A3 - JS + REACT</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A4 - STATE + REDUX</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A5 - NODE + SESSION</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A6 - MONGO + MONGOOSE</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="quizzes-section">
+                    <header>
+                        <h3> QUIZZES 10% of Total
+                            <select id="quizzes-section-dropdown">
+                                <option value="EDIT" selected>Edit</option>
+                                <option value="SPEED-GRADER">Speed Grader</option>
+                                <option value="DUPLICATE">Duplicate</option>
+                                <option value="DELETE">Delete</option>
+                                <option value="MOVE-TO">Move To...</option>
+                                <option value="SEND-TO">Send To...</option>
+                                <option value="COPY-TO">Copy To...</option>
+                                <option value="SHARE-TO-COMMONS">Share to Commons</option>
+                            </select>
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="./edit.html">Q1 - HTML</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">Q2 - CSS</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">Q3 - JS, ES6</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">Q4 - NODE</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">Q5 - MONGO</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">A6 - MONGO + MONGOOSE</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="exams-section">
+                    <header>
+                        <h3> EXAMS 20% of Total
+                            <select id="exams-section-dropdown">
+                                <option value="EDIT" selected>Edit</option>
+                                <option value="SPEED-GRADER">Speed Grader</option>
+                                <option value="DUPLICATE">Duplicate</option>
+                                <option value="DELETE">Delete</option>
+                                <option value="MOVE-TO">Move To...</option>
+                                <option value="SEND-TO">Send To...</option>
+                                <option value="COPY-TO">Copy To...</option>
+                                <option value="SHARE-TO-COMMONS">Share to Commons</option>
+                            </select>
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="./edit.html">Midterm</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                        <li><a href="./edit.html">Final</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="project-section">
+                    <header>
+                        <h3>PROJECT 30% of Total
+                            <select id="project-section-dropdown">
+                                <option value="EDIT" selected>Edit</option>
+                                <option value="SPEED-GRADER">Speed Grader</option>
+                                <option value="DUPLICATE">Duplicate</option>
+                                <option value="DELETE">Delete</option>
+                                <option value="MOVE-TO">Move To...</option>
+                                <option value="SEND-TO">Send To...</option>
+                                <option value="COPY-TO">Copy To...</option>
+                                <option value="SHARE-TO-COMMONS">Share to Commons</option>
+                            </select>
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="./edit.html">Project</a>
+                            <br>
+                            <a href="#">Multiple Modules</a> | Not available yet
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
