@@ -4,126 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d86fba7c7b.js" crossorigin="anonymous"></script>
 
-        .sidebar {
-            width: 15%;
-            vertical-align: top;
-        }
-    </style>
+    <title>Profile</title>
+
 </head>
 
 <body>
-    <div class="container">
+    <div class="d-flex flex-nowrap vh-100">
         <!-- Column 1 -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../home.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
+        <div class="d-flex h-100nav-wrapper bg-dark flex-column text-white align-items-center w">
+            <a href="./kanbasNav.html" class="d-flex align-items-center text-white text-decoration-none mt-3">
+                <img width="60" height="60" src="../img/NEU logo.png" alt="Northeastern University Logo">
+            </a>
+            <ul class="nav flex-column text-white mt-3">
+                <li class="nav-item bg-white "><a class="nav-link active" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-circle-user fa-2x text-secondary"></i>
+                            </span>
+                            <div class="text-danger">Account</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-gauge-high fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Dashboard</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="../home.html">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-book fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Courses</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-calendar-days fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Calendar</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-inbox  fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Inbox</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-clock fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">History</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-desktop fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Studio</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-right-from-bracket fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Commons</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-circle-question fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Help</div>
+                        </div>
+                    </a></li>
             </ul>
-        </nav>
+        </div>
 
-        <!-- Column 2 -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="./index.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </nav>
+        <div class="flex-fill ms-4">
+            <!-- Top -->
+            <div class="mt-3 d-flex flex-row ps-3 align-items-center">
+                <div>
+                    <i class="fa-solid fa-bars fa-2xl text-danger"></i>
+                </div>
+                <div class="ps-4 fs-3">
+                    Po Shen Lee's Profile
+                </div>
+            </div>
 
-        <!-- Column 3 -->
-        <div>
-            <form action="./index.html" id="profile-edit-form">
-                <div>
-                    <h1>Po Shen Lee</h1>
-                    <label for="profile-edit-name">Name:* </label>
-                    <input type="text" name="name" id="profile-edit-name" value="Po Shen Lee">
-                    <label for="profile-edit-pronouns">Pronouns: </label>
-                    <select name="pronouns" id="profile-edit-pronouns">
-                        <option value="NONE" selected>None</option>
-                        <option value="HE-HIM-HIS">He/Him/His</option>
-                        <option value="SHE-HER-HERS">She/Her/Hers</option>
-                        <option value="THEY-THEM-THEIRS">They/Them/Theirs</option>
-                    </select>
-                    <br>
-                    <label for="profile-edit-title">Title: </label>
-                    <input type="text" name="title" id="profit-edit-title">
-                </div>
-                <div>
-                    <h2>Contact</h2>
-                    No registered services, you can add some on the <a href="#">settings</a> page.
-                </div>
-                <div>
-                    <h2>Contact</h2>
-                    No registered services, you can add some on the <a href="#">settings</a> page.
-                </div>
-                <div>
-                    <h2>Biography</h2>
-                    <textarea name="biography" id="profile-edit-biography" cols="30"
-                        rows="10">NEU MCSC sudent</textarea>
-                </div>
-                <div>
-                    <h2>Links</h2>
-                    <ul>
-                        <li id="external-link"><a href="https://www.linkedin.com/in/eddielee207/">Linkedin</a> Links to an
-                            external site.
-                        </li>
+            <!-- Main -->
+            <div class="d-flex border-top mt-3 p-2 pt-3 flex-fill">
+                <!-- Column 2 -->
+                <div class="nav-wrapper">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Notifications</a></li>
+                        <li class="nav-item  border-start  border-dark"><a class="nav-link active text-dark"
+                                href="./index.html">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Files</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Settings</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">ePortfolios</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Shared Content</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">The Hub</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Qwickly Course Tools</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Global Announcements</a></li>
                     </ul>
                 </div>
-                <table border="0" id="links-table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Title
-                            </th>
-                            <th></th>
-                            <th>
-                                URL
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="auto-width"><input type="text" name="link-title" id="profile-edit-link-title"
-                                    value="Linkedin">
-                            </td>
-                            <td>&rarr;</td>
-                            <td class="auto-width"><input type="text" name="link-url" id="profile-edit-link-url"
-                                    value="https://www.linkedin.com/in/eddielee207/"></td>
-                            <td><a href="#">Remove</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div id="profile-edit-link-buttons">
-                    <button type="button">Add another link</button>
-                    <br>
-                    <button type="button">Cancel</button>
-                    <button>Save Profile</button>
-                    <br>
-                    <button type="button">Edit Profile</button>
-                    <button>Cancel Editing</button>
+
+                <div class="w-100 p-4">
+                    <!-- Column 3 -->
+                    <div class="float-start">
+                        <div class="d-flex justify-content-between">
+                            <i class="fa-regular fa-circle-user fa-10x"></i>
+                        </div>
+                        <div>
+                            <div class="mb-1">
+                                <label for="exampleFormControlInput1" class="form-label h4">Name:*</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Po Shen Lee">
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label h4" for="exampleFormControlInput2">Pronouns: </label>
+                                <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                    <option value="1" selected>None</option>
+                                    <option value="2">He/Him/His</option>
+                                    <option value="3">She/Her/Hers</option>
+                                    <option value="4">They/Them/Theirs</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput3" class="form-label h4">Title: </label>
+                                <input type="title" class="form-control" id="exampleFormControlInput3" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <h2>Contact</h2>
+                            No registered services, you can add some on the <a class="text-danger text-decoration-none"
+                                href="#">settings</a> page.
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Biography</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                rows="3">NEU MCSC sudent</textarea>
+                        </div>
+
+                        <div class="pt-3 pb-2 border-bottom">
+                            <h2>Links</h2>
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col">
+                                        Title
+                                    </div>
+                                    <div class="col">
+                                        URL
+                                    </div>
+                                </div>
+                                <div class="row row-cols-auto">
+                                    <div class="col">
+                                        <input type="text" name="link-title" id="profile-edit-link-title"
+                                            value="Linkedin">
+                                        <span>&rarr;</span>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" name="link-url" id="profile-edit-link-url"
+                                            value="https://www.linkedin.com/in/eddielee207/">
+                                        <span><a href="#"><i class="fa-solid fa-xmark fa-xl text-danger ps-1"></i></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-light" type="button">Add another link</button>
+                        </div>
+                        <div class="pt-3 float-end" id="profile-edit-link-buttons">
+                            <form action="./index.html" id="profile-edit-form">
+                                <button class="btn btn-light">Cancel</button>
+                                <button class="btn btn-danger">Save Profile</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Column-4 -->
+                    <div class="float-end">
+                        <form action="./index.html" id="profile-form">
+                            <button class="btn btn-light">
+                                <i class="fa-solid fa-pencil fa-rotate-270"></i>Cancel Editing</button>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
+
         </div>
+
     </div>
 </body>
 
