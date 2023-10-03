@@ -1,0 +1,10 @@
+
+.navbar-collapse.show, .navbar-collapse.collapsing {
+  text-align: center;
+  font-size: 2rem;
+  transition: height 0s ease;
+}
+
+.navbar-collapse.show {
+  height: calc(100vh - 56px);
+}
