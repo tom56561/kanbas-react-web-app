@@ -4,351 +4,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .container {
-        display: flex;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d86fba7c7b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/coursesHome.css">
 
-    .sidebar {
-        width: 15%;
-        vertical-align: top;
-    }
-</style>
+    <title>Profile</title>
+
+</head>
 
 <body>
-    <div class="container">
-        <!-- Column 1 -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="../profile/index.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </nav>
-
-        <!-- Column 2 -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="../home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="../assigments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="../grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="course_details.html">Settings</a></li>
-            </ul>
-        </nav>
-
-        <!-- Column 3 -->
-        <div>
-            <div>
-                <span><a href="course_details.html">Course Details</a></span>
-                <span><a href="#">Sections</a></span>
-                <span><a href="course_navigation.html">Navigation</a></span>
-                <span><a href="#">Apps</a></span>
-                <span><a href="#">Feature Options</a></span>
-                <span><a href="#">Integrations</a></span>
+    <div class="d-md-flex">
+        <!--Top Nav Bar -->
+        <div class="d-block d-md-none navbar navbar-expand-xxl navbar-dark bg-dark" aria-label="Seventh navbar example">
+            <div class="container-fluid d-flex justify-content-between">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav flex-column text-danger navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../profile/index.html">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-regular fa-circle-user fa-2x text-secondary"></i>
+                                    </span>
+                                    <div class="text-white">Account</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="../dashboard/index.html">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-gauge-high fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Dashboard</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item bg-white"><a class="nav-link" href="../courses/home.html">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-book fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-danger">Courses</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-regular fa-calendar-days fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Calendar</div>
+                                </div>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-inbox  fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Inbox</div>
+                                </div>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-regular fa-clock fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">History</div>
+                                </div>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-desktop fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Studio</div>
+                                </div>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-right-from-bracket fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Commons</div>
+                                </div>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span>
+                                        <i class="fa-regular fa-circle-question fa-2x text-danger"></i>
+                                    </span>
+                                    <div class="text-white">Help</div>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="navbar-brand" href="#">CS5610 Web Development</div>
+                <div>
+                    <i class="fa-solid fa-glasses text-white"></i>
+                    <i class="fa-solid fa-chevron-down  text-white"></i>
+                </div>
             </div>
-            <hr>
-
-            <form action="./index.html">
-                <h1>Course Details</h1>
-
-                <table>
-                    <tr>
-                        <td>
-                            <h4>Image:</h4>
-                        </td>
-                        <td><button id="course-details-image">Choose Image</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Name:</h4>
-                        </td>
-                        <td>
-                            <p>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Course Code:</h4>
-                        </td>
-                        <td>
-                            <p>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h4>Blueprint Course:</h4>
-                        </td>
-                        <td>
-                            <p>No</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Course Template:</h4>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="check-enable-course-template" id="check-course-template">
-                            <label for="check-course-template">Enable course as a Course Template</label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Time Zone:</h4>
-                        </td>
-                        <td>
-                            <select name="time-zone" id="time-zone">
-                                <option value="EASTERN-TIME" selected>Eastern Time (US & Canada) (-05:00/-04:00)
-                                </option>
-                                <option value="PACITIC-TIME">Pacitic Time (US & Canada) (-8:00/-7:00)</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>SIS ID:</h4>
-                        </td>
-                        <td>
-                            <p>CS4550.12631.202410</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Subaccount:</h4>
-                        </td>
-                        <td>
-                            <a href="#">CS Undergrad</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Term</h4>
-                        </td>
-                        <td>
-                            <p>202410_1 Fall 2023 Semester Full Term</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Participation:</h4>
-                        </td>
-                        <td>
-                            <select name="participation" id="dropdown-participation">
-                                <option value="TERM" selected>Term</option>
-                            </select>
-                            <p>
-                                Course participation is limited to <b>term</b> start and end dates.
-                            </p>
-                            <div>
-                                <p>
-                                    <label for="term-start"><b>Start</b></label>
-                                    <input type="date" name="term-start" id="term-start">
-                                </p>
-                                <p>
-                                    <label for="term-end"><b>End</b></label>
-                                    <input type="date" name="term-end" id="term-end">
-                                </p>
-                                <p>
-                                    <input type="checkbox" name="restrict-view-before-start"
-                                        id="check-restrict-view-before-start">
-                                    <label for="check-restrict-view-before-start">Restrict students from viewing course
-                                        before
-                                        term start date</label>
-                                    <br>
-                                    <input type="checkbox" name="restrict-view-after-end"
-                                        id="check-restrict-view-after-end">
-                                    <label for="check-restrict-view-after-end">Restrict students from viewing course
-                                        after
-                                        term
-                                        end date</label>
-                                </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Default due time:</h4>
-                        </td>
-                        <td>
-                            <select name="default-due-time" id="default-due-time">
-                                <option value="ACCOUNT-DEFAULT" selected>Account Default(11:59pm)</option>
-                                <option value="MIDDAY">Midday (11:59am)</option>
-                            </select>
-                            <p>
-                                This influences the user interface for setting due dates. It does not change the time
-                                due
-                                for any existing assignments.
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Language:</h4>
-                        </td>
-                        <td>
-                            <select name="language" id="language">
-                                <option value="NOT-SET" sele>Not set (user-configurable, defalts to English (United
-                                    States))
-                                </option>
-                            </select>
-                            <p>
-                                This will override any user/system language preferences. This is only recommended for
-                                foreign language courses.
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>File Storage:</h4>
-                        </td>
-                        <td>
-                            <p>10000 megabytes</p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Large Course:</h4>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="large-course" id="check-large-course">
-                            <label for="check-large-course">Launch SpeedGrader Filtered by Student Group</label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Grading Scheme:</h4>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="grading-scheme" id="check-grading-scheme">
-                            <label for="check-grading-scheme">Enable course grading scheme</label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>License:</h4>
-                        </td>
-                        <td>
-                            <select name="license" id="dropdown-license">
-                                <option value="PRIVATE" selected>Private (Copyrighted)</option>
-                                <option value="PUBLIC">Public</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>File Copyright:</h4>
-                        </td>
-                        <td>
-                            <input type="checkbox" name="file-copyright" id="check-file-copyright">
-                            <label for="check-file-copyright">
-                                Copyright and license information must be provided for files
-                                before they are published.
-                            </label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Visibility:</h4>
-                        </td>
-                        <td>
-                            <p>If you need to make your course public please contact yoru administrator/support.</p>
-                            <select name="visibility" id="dropdown-visibility">
-                                <option value="COURSE" selected>Course</option>
-                                <option value="ASSIGNMENT">Assignment</option>
-                                <option value="FILES">Files</option>
-                            </select>
-                            <p>
-                                <input type="checkbox" name="include-course-in-public-course-index"
-                                    id="check-include-course-in-public-course-index">
-                                <label for="check-include-course-in-public-course-index">Include this course in the
-                                    public
-                                    course index</label>
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Format:</h4>
-                        </td>
-                        <td>
-                            <select name="course-format" id="dropdown-course-format">
-                                <option value="ON-CAMPUS" selected>On Campus</option>
-                                <option value="ONLINE">Online</option>
-                                <option value="HYBRID">Hybrid</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Mastery Paths:</h4>
-                        </td>
-                        <td>
-                            <p>
-                                <input type="checkbox" name="individual-learning-paths"
-                                    id="check-individual-learning-paths">
-                                <label for="check-individual-learning-paths">
-                                    Enable individual learning paths for students based on assessment
-                                </label>
-                            </p>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <h4>Description:</h4>
-                        </td>
-                        <td>
-                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <a href="#">more options</a>
-                        </td>
-                        <td>
-                            <button>Update Course Details</button>
-                        </td>
-                    </tr>
-
-            </form>
         </div>
+
+        <!-- Side Bar -->
+        <div class="d-none d-md-flex h-100 position-fixed bg-dark flex-column text-white align-items-center"
+            style="width: 85px;">
+            <a href="./kanbasNav.html" class="d-flex align-items-center text-white text-decoration-none mt-3">
+                <img width="60" height="60" src="../img/NEU logo.png" alt="Northeastern University Logo">
+            </a>
+            <ul class="nav flex-column text-white mt-3">
+                <li class="nav-item"><a class="nav-link" href="../profile/index.html">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-circle-user fa-2x text-secondary"></i>
+                            </span>
+                            <div class="text-white">Account</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link active" href="../dashboard/index.html">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-gauge-high fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Dashboard</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item bg-white"><a class="nav-link" href="../courses/home.html">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-book fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-danger">Courses</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-calendar-days fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Calendar</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-inbox  fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Inbox</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-clock fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">History</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-desktop fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Studio</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-solid fa-right-from-bracket fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Commons</div>
+                        </div>
+                    </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                        <div class="d-flex flex-column align-items-center">
+                            <span>
+                                <i class="fa-regular fa-circle-question fa-2x text-danger"></i>
+                            </span>
+                            <div class="text-white">Help</div>
+                        </div>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="flex-fill" style="margin-left: 100px">
+            <!-- Top -->
+            <div class="d-none d-md-flex mt-3 flex-row ps-3 align-items-center">
+                <div>
+                    <i class="fa-solid fa-bars fa-2xl text-danger"></i>
+                </div>
+                <div class="ps-4">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex align-items-end">
+                            <li class="breadcrumb-item pt-3"><a class="text-decoration-none fs-3 text-danger"
+                                    href="#">CS5610 Web Development</a>
+                            </li>
+                            <li class="breadcrumb-item active fs-4 text-secondary active" aria-current="page">Settings
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="ms-auto pe-3">
+                    <button class="btn btn-lg btn-light border-secondary">
+                        <i class="fa-solid fa-glasses"></i>
+                        Student View
+                    </button>
+                </div>
+            </div>
+
+
+
+            <!-- Main -->
+            <div class="row border-top mt-3 p-2 pt-3">
+                <!-- Column 1 -->
+                <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                    <ul class="nav flex-column fs-5">
+                        <li class="nav-item"><a class="nav-link active text-danger" href="../courses/home.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Modules</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Announcements</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Quizzes</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="../grades/index.html">Grades</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Zoom Meetings</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger"
+                                href="../assigments/index.html">Assignments</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">People</a></li>
+                        <li class="nav-item border-start border-dark"><a class="nav-link text-dark" href="./course_details.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-10 col-lg-10 row">
+                    <!-- Column 2 -->
+                    <div class="col-xl-12">
+                        <ul class="nav flex-row fs-5 border-bottom">
+                            <li class="nav-item border border-bottom-0 border-dark"><a class="nav-link text-dark" href="./course_details.html">Settings</a></li>
+                            <li class="nav-item"><a class="nav-link text-danger" href="#">Section</a></li>
+                            <li class="nav-item"><a class="nav-link text-danger" href="./course_navigation.html">Navigation</a></li>
+                            <li class="nav-item"><a class="nav-link text-danger" href="#">Apps</a></li>
+                            <li class="nav-item"><a class="nav-link text-danger" href="#">Feature</a></li>
+                            <li class="nav-item"><a class="nav-link text-danger" href="#">Integrations</a></li>
+                        </ul>
+
+
+                        <div>
+                            <div class="h3">
+                                Course Details
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label fs-4">Assignment Name</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="A1-SETUP">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3">This assigments ..........</textarea>
+                            </div>
+                            <div>
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Point</label>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                            placeholder="100">
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Assignment
+                                    </label>
+                                    <div class="col-sm-6">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Assignment</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Display Grade
+                                        as</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Percentage</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Don not count this
+                                                assigment</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Submission
+                                        Type</label>
+                                    <div class="col-sm-6 border">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Online</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                        <div class="py-2">Online Entry Options</div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Text Entry
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Website URL</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Media Recordings</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Media Recordings</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Submission
+                                        Type</label>
+                                    <div class="col-sm-6 border">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Assign to</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Due</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Available
+                                                from</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Until
+                                                from</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top">
+                            <div class="form-check d-inline mt-2">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked=""
+                                    required="">
+                                <label class="form-check-label" for="credit">Media Recordings</label>
+                            </div>
+                            <div class="pt-3 float-end boer" id="profile-edit-link-buttons">
+                                <form action="./index.html" id="profile-edit-form">
+                                    <button class="btn btn-light">Cancel</button>
+                                    <button class="btn btn-danger">Save Profile</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </body>
 

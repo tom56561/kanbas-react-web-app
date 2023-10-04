@@ -207,8 +207,14 @@
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb d-flex align-items-end">
                             <li class="breadcrumb-item pt-3"><a class="text-decoration-none fs-3 text-danger"
-                                    href="#">CS5610 Web Development</a></li>
-                            <li class="breadcrumb-item active fs-4 text-secondary" aria-current="page">Assignments</li>
+                                    href="#">CS5610 Web Development</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page"><a
+                                    class="text-decoration-none fs-4 text-danger" href="./index.html">
+                                    Assignments</a>
+                            </li>
+                            <li class="breadcrumb-item active fs-4 text-secondary active" aria-current="page">A1-SETUP
+                            </li>
                         </ol>
                     </nav>
                 </div>
@@ -233,135 +239,177 @@
                         <li class="nav-item"><a class="nav-link text-danger" href="#">Modules</a></li>
                         <li class="nav-item"><a class="nav-link text-danger" href="#">Announcements</a></li>
                         <li class="nav-item"><a class="nav-link text-danger" href="#">Quizzes</a></li>
-                        <li class="nav-item border-start border-dark"><a class="nav-link text-danger text-dark" href="./index.html">Grades</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Grades</a></li>
                         <li class="nav-item"><a class="nav-link text-danger" href="#">Zoom Meetings</a></li>
-                        <li class="nav-item"><a class="nav-link text-danger"
+                        <li class="nav-item border-start border-dark"><a class="nav-link text-dark"
                                 href="../assigments/index.html">Assignments</a></li>
                         <li class="nav-item"><a class="nav-link text-danger" href="#">People</a></li>
-                        <li class="nav-item"><a class="nav-link text-danger" href="../setting/course_details.html">Settings</a></li>
+                        <li class="nav-item"><a class="nav-link text-danger" href="#">Settings</a></li>
                     </ul>
                 </div>
 
                 <div class="col-xl-10 col-lg-10 row">
                     <!-- Column 2 -->
                     <div class="col-xl-12">
-                        <div class="" style="height: 70px;">
+                        <div class="border-bottom" style="height: 70px;">
                             <div class="">
-                                <div class="float-end">
-                                    <button class="btn btn-lg btn-light border-secondary">
-                                        <i class="fa-solid fa-file-import"></i>
-                                        Import
-                                    </button>
-                                    <button class="btn btn-lg btn-light border-secondary ms-2">
-                                        <i class="fa-solid fa-file-import"></i>
-                                        Export
-                                    </button>
-                                    <button class="btn btn-lg btn-light border-secondary ms-2">
-                                        <i class="fa-solid fa-gear"></i> </button>
+                                <div class="float-end d-flex align-items-center">
+                                    <div class="fs-4 text-success">
+                                        <i class="fa fa-check-circle text-success"></i>
+                                        Published
+                                    </div>
+                                    <a href="./edit.html" class="btn btn-lg btn-light border-secondary ms-2">
+                                        <i class="fa-solid fa-ellipsis-vertical fa-2xlx"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="mb-3 col">
-                                <label for="exampleFormControlInput1" class="form-label">Student Names</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Search Students">
-                            </div>
-                            <div class="mb-3 col">
-                                <label for="exampleFormControlInput1" class="form-label">Assignment Names</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Search Assignments">
-                            </div>
-                        </div>
 
                         <div>
-                            <button class="btn btn-lg btn-light border-secondary ms-2">
-                                <i class="fa-solid fa-filter"></i>
-                                Apply Filters
-                            </button>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label fs-4">Assignment Name</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="A1-SETUP">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3">This assigments ..........</textarea>
+                            </div>
+                            <div>
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Point</label>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                            placeholder="100">
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Assignment
+                                    </label>
+                                    <div class="col-sm-6">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Assignment</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Display Grade
+                                        as</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Percentage</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-6">
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Don not count this
+                                                assigment</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Submission
+                                        Type</label>
+                                    <div class="col-sm-6 border">
+                                        <select class="form-select" name="pronouns" id="exampleFormControlInput2">
+                                            <option value="1" selected>Online</option>
+                                            <option value="2">Optition 1</option>
+                                            <option value="3">Optition 2</option>
+                                            <option value="4">Optition 3</option>
+                                        </select>
+                                        <div class="py-2">Online Entry Options</div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Text Entry
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Website URL</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Media Recordings</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="credit" name="paymentMethod" type="radio"
+                                                class="form-check-input" checked="" required="">
+                                            <label class="form-check-label" for="credit">Media Recordings</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+
+                                <div class="mb-3 row">
+                                    <div class="col-sm-2"></div>
+                                    <label class="col-sm-2 col-form-label" for="exampleFormControlInput2">Submission
+                                        Type</label>
+                                    <div class="col-sm-6 border">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Assign to</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Due</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Available
+                                                from</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                            <label for="exampleFormControlInput1" class="form-label">Until
+                                                from</label>
+                                            <input type="name" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="A1-SETUP">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="fs-4 mt-3">
-                            <table class="table table-striped border">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Student</th>
-                                        <th scope="col">A1 SETUP</th>
-                                        <th scope="col">A2 HTML</th>
-                                        <th scope="col">A3 CSS</th>
-                                        <th scope="col">A4 BOOSTRAP</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-danger" scope="row">Eddie</th>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                        <td>100%</td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
+                        <div class="border-top">
+                            <div class="form-check d-inline mt-2">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked=""
+                                    required="">
+                                <label class="form-check-label" for="credit">Media Recordings</label>
+                            </div>
+                            <div class="pt-3 float-end boer" id="profile-edit-link-buttons">
+                                <form action="./index.html" id="profile-edit-form">
+                                    <button class="btn btn-light">Cancel</button>
+                                    <button class="btn btn-danger">Save Profile</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
