@@ -1,0 +1,43 @@
+.kanbas-navigation .wd-icon {
+    font-size: 2.5em;
+}
+.kanbas-navigation {
+    background-color: black;
+    padding: 0px;
+    width: 80px !important;
+    margin: 0px;
+}
+
+.kanbas-navigation a {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 7px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.kanbas-navigation a.active  {
+    background-color: white;
+    color: red;
+}
+.kanbas-navigation a .wd-icon {
+    color: red;
+}
+
+.kanbas-navigation a .wd-icon.wd-user-icon{
+    color: lightgray;
+    
+}
+
+
+.kanbas-navigation Link a{
+    color: white;
+    text-decoration: none;
+    
+}
+.kanbas-navigation Link.wd-icon{
+    color: red;
+    
+}
