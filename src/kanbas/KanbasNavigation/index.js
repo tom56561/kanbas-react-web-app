@@ -25,7 +25,7 @@ function KanbasNavigation() {
     return (
         <div className="d-flex h-100 position-fixed bg-dark flex-column text-white align-items-center kanbas-navigation" style={{ width: 85 }}>
             <Link to="./kanbasNav.html" className="d-flex align-items-center text-white text-decoration-none mt-3">
-                <img width="60" heigitght="60" src={logo} alt="Northeastern University Logo" />
+                <img width="60" height="60" src={logo} alt="Northeastern University Logo" />
             </Link>
             <ul className="nav flex-column text-white mt-3">
                 {links.map((link, index) => (
@@ -33,7 +33,7 @@ function KanbasNavigation() {
                         <Link to={`/Kanbas/${link.name}`} className={`list-group-item ${pathname.includes(link.name) && "active"}`}>
                             <div className="d-flex flex-column align-items-center">
                                 {link.icon}
-                                <div className={pathname.includes(link.name) ? "text-danger" : "text-white"}>{link.name}</div>
+                                <div className={pathname.includes(link.na) ? "text-danger" : "text-white"}>{link.name}</div>
                             </div>
                         </Link>
                     </li>

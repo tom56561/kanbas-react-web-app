@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import BreadCrumb from "./BreadCrumb"
+import Home from "./Home";
 
 
 
@@ -12,7 +13,6 @@ function Courses() {
     return (
         <div className="flex-fill">
             <BreadCrumb />
-            {/* <h1>{course.number} {course.name}</h1> */}
             <hr className="horizontal-rule" />
 
             <div className="mt-3 row">
@@ -20,7 +20,7 @@ function Courses() {
                 <div className="col-xl-10 col-lg-10">
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<h1>Home</h1>} />
+                        <Route path="Home" element={<Home/>} />
                         <Route path="Modules" element={<Modules />} />
                         <Route path="Assignments" element={<h1>Assignments</h1>} />
                         <Route
