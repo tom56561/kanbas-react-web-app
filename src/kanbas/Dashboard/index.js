@@ -10,7 +10,7 @@ function Dashboard() {
       <div className="row">
         {courses.map((course) => (
           <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="col-xl-3 col-lg-4 col-md-6 py-3 text-decoration-none">
-              <div class="card" style={{width: '270'}}>
+              <div class="card" style={{width: '270px'}}>
                 <div class="card-img-top bg-primary" style={{height: '100px'}}>
                   <a href="#" class="float-end p-4">
                     <i class="fa-solid fa-ellipsis-vertical fa-2xl text-white"></i>
