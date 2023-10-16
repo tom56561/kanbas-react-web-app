@@ -33,7 +33,7 @@ function KanbasNavigation() {
                         <Link to={`/Kanbas/${link.name}`} className={`list-group-item ${pathname.includes(link.name) && "active"}`}>
                             <div className="d-flex flex-column align-items-center">
                                 {link.icon}
-                                <div className={pathname.includes(link.na) ? "text-danger" : "text-white"}>{link.name}</div>
+                                <div className={pathname.includes(link.name) ? "text-danger" : "text-white"}>{link.name}</div>
                             </div>
                         </Link>
                     </li>
