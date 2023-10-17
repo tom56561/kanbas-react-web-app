@@ -3,7 +3,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { RiDashboard3Fill } from "react-icons/ri";
 import { FaBook, FaInbox, FaHistory, FaCameraRetro, FaShareSquare, FaQuestionCircle } from "react-icons/fa";
 import { BsFillCalendar2WeekFill } from "react-icons/bs";
-import logo from "../img/NEU logo.png";
+import logo from "../img/NEULogo.png";
 
 import "./index.css";
 

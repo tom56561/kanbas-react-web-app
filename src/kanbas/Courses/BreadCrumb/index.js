@@ -1,6 +1,6 @@
 import { Link, useParams, useLocation } from "react-router-dom";
 import "./index.css"
-import { FaBars, FaGlasses} from "react-icons/fa";
+import { FaBars, FaGlasses } from "react-icons/fa";
 
 
 function BreadCrumb() {
@@ -12,11 +12,10 @@ function BreadCrumb() {
     breadcrumbs.shift();
     const firstBreadcrumb = (
         <li class="breadcrumb-item pt-3">
-            <a
-                className="text-decoration-none fs-3 text-danger"
-                href={`/Kanbas/Courses${breadcrumbs[0]}`}>
+            <Link to={`/Kanbas/Courses/${breadcrumbs[0]}/Home`}
+                className="text-decoration-none fs-3 text-danger">
                 {breadcrumbs[0]}
-            </a>
+            </Link>
         </li>
     );
     const secondBreadcrumb = (
@@ -28,7 +27,7 @@ function BreadCrumb() {
     return (
         <div className="d-none d-md-flex mt-3 flex-row ps-3 align-items-center">
             <div>
-                <FaBars className="text-danger icon me-2"/>
+                <FaBars className="text-danger icon me-2" />
             </div>
             <div>
                 <nav className="nav-container" aria-label="breadcrumb">
@@ -40,7 +39,7 @@ function BreadCrumb() {
             </div>
             <div class="ms-auto pe-3">
                 <button class="btn btn-lg btn-light border-secondary">
-                    <FaGlasses className="icon pe-2"/>
+                    <FaGlasses className="icon pe-2" />
                     Student View
                 </button>
             </div>
@@ -49,26 +48,3 @@ function BreadCrumb() {
 }
 
 export default BreadCrumb;
-
-
-<div class="d-none d-md-flex mt-3 flex-row ps-3 align-items-center">
-    <div>
-        <i class="fa-solid fa-bars fa-2xl text-danger"></i>
-    </div>
-    <div class="ps-4">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb d-flex align-items-end">
-                <li class="breadcrumb-item pt-3"><a class="text-decoration-none fs-3 text-danger"
-                    href="#">CS5610 Web Development</a></li>
-                <li class="breadcrumb-item active fs-4 text-secondary" aria-current="page">Modules</li>
-            </ol>
-        </nav>
-    </div>
-
-    <div class="ms-auto pe-3">
-        <button class="btn btn-lg btn-light border-secondary">
-            <i class="fa-solid fa-glasses"></i>
-            Student View
-        </button>
-    </div>
-</div>
