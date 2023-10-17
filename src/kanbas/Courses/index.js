@@ -6,6 +6,7 @@ import BreadCrumb from "./BreadCrumb"
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import Grades from "./Grades";
 
 
 function Courses() {
@@ -17,17 +18,17 @@ function Courses() {
             <hr className="horizontal-rule" />
 
             <div className="mt-3 row">
-                <CourseNavigation className="col-xl-2 col-lg-2 d-none d-lg-block"/>
+                <CourseNavigation className="col-xl-2 col-lg-2 d-none d-lg-block" />
                 <div className="col-xl-10 col-lg-10">
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<Home/>} />
+                        <Route path="Home" element={<Home />} />
                         <Route path="Modules" element={<Modules />} />
-                        <Route path="Assignments" element={<Assignments/>} />
+                        <Route path="Assignments" element={<Assignments />} />
                         <Route
                             path="Assignments/:assignmentId"
-                            element={<AssignmentEditor/>}/>
-                        <Route path="Grades" element={<h1>Grades</h1>} />
+                            element={<AssignmentEditor />} />
+                        <Route path="Grades" element={<Grades />} />
                     </Routes>
                 </div>
             </div>
