@@ -2,53 +2,35 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import { FaGripVertical, FaSortDown, FaRegCheckCircle, FaPlus, FaEllipsisV } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const [modules, setModules] = useState(db.modules);
-    const [module, setModule] = useState({
-        name: "New Module",
-        description: "New Description",
-        course: courseId,
-    });
-    const addModule = (module) => {
-        setModules([
-            { ...module, _id: new Date().getTime().toString() },
-            ...modules,
-        ]);
-    };
-    const deleteModule = (moduleId) => {
-        setModules(modules.filter(
-            (module) => module._id !== moduleId));
-    };
-    const updateModule = () => {
-        setModules(
-            modules.map((m) => {
-                if (m._id === module._id) {
-                    return module;
-                } else {
-                    return m;
-                }
-            })
-        );
-    }
-
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
     return (
         <div class="fs-4 mt-3">
             <ul className="list-group">
                 <li className="list-group-item">
                     <input className="form-control" value={module.name}
-                        onChange={(e) => setModule({
+                        onChange={(e) => dispatch(setModule({
                             ...module, name: e.target.value
-                        })}
+                        }))}
                     />
                     <textarea className="form-control" value={module.description}
-                        onChange={(e) => setModule({
+                        onChange={(e) => dispatch(setModule({
                             ...module, description: e.target.value
-                        })}
+                        }))}
                     />
-                    <button className="btn btn-primary mt-2 me-2" onClick={updateModule}> Update </button>
-                    <button className="btn btn-success mt-2" onClick={() => { addModule(module) }}>Add</button>
+                    <button className="btn btn-primary mt-2 me-2" onClick={() => dispatch(updateModule(module))}> Update </button>
+                    <button className="btn btn-success mt-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
                 </li>
 
                 {modules
@@ -64,11 +46,11 @@ function ModuleList() {
                                 <FaPlus />
                                 <FaEllipsisV />
                                 <button className="btn btn-warning me-1"
-                                    onClick={(event) => { setModule(module); }}>
+                                    onClick={() => dispatch(setModule(module))}>
                                     Edit
                                 </button>
                                 <button className="btn btn-danger"
-                                    onClick={() => deleteModule(module._id)}>
+                                    onClick={() => dispatch(deleteModule(module._id))}>
                                     Delete
                                 </button>
                             </span>
