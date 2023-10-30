@@ -1,15 +1,29 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import { useSelector, useDispatch } from 'react-redux';
 import { FaGripVertical, FaSortDown, FaRegCheckCircle, FaPlus, FaEllipsisV, FaPenSquare } from "react-icons/fa";
+import { setAssignment } from "./assignmentsReducer";
 
 
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+
+
+  const formatDate = (isoDate) => {
+    const date = new Date(isoDate);
+    const options = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+    return new Intl.DateTimeFormat('en-US', options).format(date).replace(',', '');
+  };
+
   return (
     <div>
 
@@ -23,7 +37,11 @@ function Assignments() {
             <button class="btn btn-lg btn-light border-secondary ms-2">
               + Group
             </button>
-            <button class="btn btn-lg btn-danger border-secondary ms-2">
+            <button
+              onClick={() => {navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
+              dispatch(setAssignment({...assignment, name: "New Assignment", course: courseId}));
+            }}
+              class="btn btn-lg btn-danger border-secondary ms-2">
               + Assignment
             </button>
             <button class="btn btn-lg btn-light border-secondary ms-2">
@@ -47,10 +65,15 @@ function Assignments() {
             </span>
           </li>
           {courseAssignments.map((assignment) => (
-            <Link
+            <div
               key={assignment._id}
-              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-              className="list-group-item d-flex align-items-center py-4">
+              onClick={() => {
+                dispatch(setAssignment(assignment));
+                navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+            }}
+              className="list-group-item d-flex align-items-center py-4"
+              style={{ cursor: 'pointer' }}
+              >
               <div>
                 <FaGripVertical />
               </div>
@@ -58,16 +81,16 @@ function Assignments() {
               <i class="fa-regular fa-pen-to-square text-success"></i>
               <div class="ms-3">
                 <div class="fs-4 fw-semibold">
-                  {assignment.title}
+                  {assignment.name}
                 </div>
-                <span class="fs-6 text-secondary">Week 0 - SETUP - Week starting on Monday </span>
-                <span class="fs-6 text-secondary">| Due Sep 18, 2022 at 11:59pm | 100 pts </span>
+                <span class="fs-6 text-secondary">Not available until {formatDate(assignment.availableFromDate)} </span>
+                <span class="fs-6 text-secondary">| Due {formatDate(assignment.dueDate)} | 100 pts </span>
               </div>
               <div class="ms-auto">
                 <FaRegCheckCircle className="text-success me-3" />
                 <FaEllipsisV />
               </div>
-            </Link>
+            </div>
           ))}
         </ul>
       </div>
