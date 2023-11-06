@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Kanban Full-Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Kanban-style task management web application, built with React.js and Redux on the frontend, Node.js on the backend, and MongoDB as the data store. The application allows users to create, update, and organize tasks in a visually appealing interface, designed with Bootstrap and FontAwesome. It's deployed on Netlify for live interaction.
 
-## Available Scripts
+## Frontend Deployed to Netlify
+Access the live application here:
+https://cs5610-react-kanbas.netlify.app/#/Kanbas/Dashboard
 
-In the project directory, you can run:
+![Demo](demo.png)
 
-### `npm start`
+## Highlights
+- Managed local component state in React using state and effect hooks for isolated state management.
+- Integrated Redux for managing global application state, ensuring consistency and predictability across the application.
+- Established a Node.js backend that interfaces with MongoDB for persistent CRUD operations.
+- Deployed the application on Netlify, demonstrating the ability to manage and deploy web applications in a live environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React.js**: Powers the dynamic front-end user interface.
+- **Redux**: Manages global state for a consistent user experience.
+- **Node.js**: Facilitates a robust backend server.
+- **MongoDB**: Ensures data persistence and enables CRUD operations.
+- **Netlify**: Hosts the application, enabling real-world accessibility.
+- **Bootstrap**: Provides a responsive layout and design.
+- **FontAwesome**: Enhances the UI with attractive icons.
 
-### `npm test`
+## Local Development Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before setting up the project locally, ensure Node.js, npm (or yarn), and MongoDB are installed on your machine.
 
-### `npm run build`
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/kanban-app.git
+   cd kanban-app
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
+The project is deployed on Netlify with continuous deployment from the main branch. To deploy your own version, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Build your React application:
+```sh
+npm run build
+```
+Connect your GitHub repository to Netlify.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Configure your build settings and deploy.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Process
+This project is still a work in progress. More features and improvements are coming soon!
