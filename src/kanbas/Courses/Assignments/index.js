@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { useSelector, useDispatch } from 'react-redux';
 import { FaGripVertical, FaSortDown, FaRegCheckCircle, FaPlus, FaEllipsisV, FaPenSquare } from "react-icons/fa";
 import { setAssignment } from "./assignmentsReducer";
