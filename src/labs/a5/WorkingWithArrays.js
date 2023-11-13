@@ -3,6 +3,7 @@ import axios from "axios";
 
 
 function WorkingWithArrays() {
+    const API_BASE = "https://kanbas-node-server-app-t9tx.onrender.com";
     const [errorMessage, setErrorMessage] = useState(null);
     const [todo, setTodo] = useState({
         id: 1,
@@ -11,7 +12,7 @@ function WorkingWithArrays() {
         due: "2021-09-09",
         completed: false,
     });
-    const API = "http://localhost:4000/a5/todos";
+    const API = `${API_BASE}/a5/todos`;
     const [todos, setTodos] = useState([]);
     const fetchTodos = async () => {
         const response = await axios.get(API);
