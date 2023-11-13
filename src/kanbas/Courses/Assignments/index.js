@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { FaGripVertical, FaSortDown, FaRegCheckCircle, FaPlus, FaEllipsisV, FaPenSquare } from "react-icons/fa";
-import { setAssignment } from "./assignmentsReducer";
-
+import {
+  setAssignment,
+  setAssignments,
+} from "./assignmentsReducer";
+import * as client from "./client";
 
 
 function Assignments() {
   const { courseId } = useParams();
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
-  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-
-
   const formatDate = (isoDate) => {
     const date = new Date(isoDate);
     const options = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
     return new Intl.DateTimeFormat('en-US', options).format(date).replace(',', '');
   };
+
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId]);
 
   return (
     <div>
@@ -37,9 +41,15 @@ function Assignments() {
               + Group
             </button>
             <button
-              onClick={() => {navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
-              dispatch(setAssignment({...assignment, name: "New Assignment", course: courseId}));
-            }}
+              onClick={() => {
+                navigate(`/Kanbas/Courses/${courseId}/Assignments/new`);
+                dispatch(setAssignment({
+                  name: "New Assignment 123", description: "New Description",
+                  dueDate: "2023-12-08T23:59:00Z",
+                  availableFromDate: "2023-11-08T00:00:00Z",
+                  availableUntilDate: "2023-12-08T23:59:00Z", course: courseId
+                }));
+              }}
               class="btn btn-lg btn-danger border-secondary ms-2">
               + Assignment
             </button>
@@ -63,16 +73,16 @@ function Assignments() {
               <FaEllipsisV />
             </span>
           </li>
-          {courseAssignments.map((assignment) => (
+          {assignments.map((assignment) => (
             <div
               key={assignment._id}
               onClick={() => {
                 dispatch(setAssignment(assignment));
                 navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
-            }}
+              }}
               className="list-group-item d-flex align-items-center py-4"
               style={{ cursor: 'pointer' }}
-              >
+            >
               <div>
                 <FaGripVertical />
               </div>

@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import db from "../../../Database";
 import { FaRegCheckCircle, FaEllipsisV } from "react-icons/fa";
 import { useSelector, useDispatch } from 'react-redux';
 import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "../assignmentsReducer";
-
+import * as client from "../client";
 
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
 
-
-  const handleSave = () => {
-    (assignmentId === "new") ? dispatch(addAssignment({ ...assignment, course: courseId })) : dispatch(updateAssignment(assignment));
+  const handleSave = async () => {
+    (assignmentId === "new") ? await handleAddAssignment() : await handleUpdateAssignment();
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
 
@@ -29,6 +25,21 @@ function AssignmentEditor() {
     if (!isoString) return '';
     const date = new Date(isoString);
     return date.toISOString().split('T')[0];
+  };
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment({ ...assignment, course: courseId }));
+    });
+  };
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
   };
 
   return (
@@ -115,7 +126,7 @@ function AssignmentEditor() {
           </Link>
           <button className="btn btn-danger me-2"
             onClick={() => {
-              dispatch(deleteAssignment(assignmentId));
+              handleDeleteAssignment(assignmentId);
               navigate(`/Kanbas/Courses/${courseId}/Assignments`)
             }}>
             Delete
