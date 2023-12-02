@@ -11,15 +11,17 @@ function KanbasNavigation() {
     const { pathname } = useLocation();
 
     const links = [
-        { name: "Account", icon: <BiUserCircle className="wd-icon wd-user-icon" /> },
+        { name: "account", icon: <BiUserCircle className="wd-icon wd-user-icon" /> },
         { name: "Dashboard", icon: <RiDashboard3Fill className="wd-icon" /> },
         { name: "Courses", icon: <FaBook className="wd-icon" /> },
+        { name: "Signin", icon: <BiUserCircle className="wd-icon" /> },
+        { name: "Signup", icon: <BiUserCircle className="wd-icon" /> },
         { name: "Calendar", icon: <BsFillCalendar2WeekFill className="wd-icon" /> },
         { name: "Inbox", icon: <FaInbox className="wd-icon" /> },
         { name: "History", icon: <FaHistory className="wd-icon" /> },
         { name: "Studio", icon: <FaCameraRetro className="wd-icon" /> },
         { name: "Commons", icon: <FaShareSquare className="wd-icon" /> },
-        { name: "Help", icon: <FaQuestionCircle className="wd-icon" /> }
+        { name: "Help", icon: <FaQuestionCircle className="wd-icon" /> },
     ];
 
     return (

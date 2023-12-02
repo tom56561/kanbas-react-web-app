@@ -2,7 +2,10 @@ import KanbasNavigation from "./KanbasNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import db from "./Database";
+import Signin from "./Users/signin";
+import Signup from "./Users/signup";
+import Account from "./Users/account";
+import UserTable from "./Users/table";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -64,7 +67,12 @@ function Kanbas() {
         <div class="flex-fill" style={{ marginLeft: '100px' }}>
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
-            <Route path="Account" element={<h1>Account</h1>} />
+            <Route path="Signin" element={<Signin />} />
+            <Route path="Signup" element={<Signup />} />
+            <Route path="Account" element={<Account />} />
+            <Route path="Account/:id" element={<Account />} />
+            <Route path="admin/Users" element={<UserTable />} />
+            {/* <Route path="Account" element={<h1>Account</h1>} /> */}
             <Route path="Dashboard" element={
               <Dashboard
                 courses={courses}
