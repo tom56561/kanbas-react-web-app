@@ -19,7 +19,6 @@ function UserTable() {
     };
     const createUser = async () => {
         try {
-            setUser({ ...user, _id: new Date().getTime().toString() })
             const newUser = await client.createUser(user);
             setUsers([newUser, ...users]);
         } catch (err) {
@@ -51,12 +50,17 @@ function UserTable() {
                 <thead>
                     <tr>
                         <th>Username</th>
+                        <th>Password</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Role</th>
+                        <th>Operation</th>
                     </tr>
                     <tr>
                         <td>
                             <input value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })} />
+                        </td>
+                        <td>
                             <input value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })} />
                         </td>
                         <td>
@@ -90,8 +94,10 @@ function UserTable() {
                             <Link to={`/kanbas/account/${user._id}`}>
                                 <td>{user.username}</td>
                             </Link>
+                            <td>{user.password}</td>
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
+                            <td>{user.role}</td>
                             <td className="text-nowrap">
                                 <button className="btn btn-warning me-2">
                                     <BsPencil onClick={() => selectUser(user)} />

@@ -35,40 +35,58 @@ function Account() {
             <h1>Account</h1>
             {account && (
                 <div>
-                    <input value={account.password}
-                        onChange={(e) => setAccount({
+                    <div>
+                        <label className="form-label">Password</label>
+                        <input value={account.password}
+                            onChange={(e) => setAccount({
+                                ...account,
+                                password: e.target.value
+                            })} />
+                    </div>
+                    <div>
+                        <label className="form-label">firstName</label>
+                        <input value={account.firstName}
+                            onChange={(e) => setAccount({
+                                ...account,
+                                firstName: e.target.value
+                            })} />
+                    </div>
+                    <div>
+                        <label className="form-label">lastName</label>
+                        <input value={account.lastName}
+                            onChange={(e) => setAccount({
+                                ...account,
+                                lastName: e.target.value
+                            })} />
+                    </div>
+                    <div>
+                        <label className="form-label">dob</label>
+                        <input value={account.dob}
+                            onChange={(e) => setAccount({
+                                ...account,
+                                dob: e.target.value
+                            })} />
+                    </div>
+                    <div>
+                        <label className="form-label">email</label>
+                        <input value={account.email}
+                            onChange={(e) => setAccount({
+                                ...account,
+                                email: e.target.value
+                            })} />
+                    </div>
+                    <div>
+                        <label className="form-label">role</label>
+                        <select onChange={(e) => setAccount({
                             ...account,
-                            password: e.target.value
-                        })} />
-                    <input value={account.firstName}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            firstName: e.target.value
-                        })} />
-                    <input value={account.lastName}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            lastName: e.target.value
-                        })} />
-                    <input value={account.dob}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            dob: e.target.value
-                        })} />
-                    <input value={account.email}
-                        onChange={(e) => setAccount({
-                            ...account,
-                            email: e.target.value
-                        })} />
-                    <select onChange={(e) => setAccount({
-                        ...account,
-                        role: e.target.value
-                    })}>
-                        <option value="USER">User</option>
-                        <option value="ADMIN">Admin</option>
-                        <option value="FACULTY">Faculty</option>
-                        <option value="STUDENT">Student</option>
-                    </select>
+                            role: e.target.value
+                        })}>
+                            <option value="USER">User</option>
+                            <option value="ADMIN">Admin</option>
+                            <option value="FACULTY">Faculty</option>
+                            <option value="STUDENT">Student</option>
+                        </select>
+                    </div>
                 </div>
             )}
             <button className="btn btn-primary w-100" onClick={save}>
